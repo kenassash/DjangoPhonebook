@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link href="{% static 'phonebook/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'phonebook/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <script defer src="{% static 'phonebook/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <title>{% block title %}Справочник{% endblock %}</title>
+</head>
+<body>
+<!--верхний навбар-->
+{% include 'phonebook/inc/_nav.html' %}
+<!--    блок основной контейнер-->
+<div id="main-container" class="container-fluid">
+    <!--класс .container для фиксированной ширины или .container-fluid для 100%-ной ширины-->
+    <div class="row">
+        <!--«Rows» — горизонтальные группы столбцов, которые обеспечивают чтобы столбцы выстроились правильно.-->
+        <div id="phonebook" class="tabbable  col-md-12">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-lg-2 tabs-left">
+                    {% block sidebar %}SIDEBAR{% endblock %}
+                </div>
+                <div class="tab-content col-md-10 col-sm-10 col-lg-10">
+
+                    {% block content %}CONTENT{% endblock %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{#{% block mainmenu %}#}
+{#{% endblock mainmenu %}#}
+
+
+</body>
+</html>
