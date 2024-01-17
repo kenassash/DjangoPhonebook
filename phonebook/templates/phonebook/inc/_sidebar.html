@@ -3,6 +3,7 @@
 <!--{# загружаем пользовательский тег #}-->
 {% load phonebook_tags %}
 {% get_division as divisions %}
+{% load mptt_tags %}
 
 <nav class="nav flex-column">
 
@@ -13,13 +14,58 @@
     <div class="list-group">
 {#- Перечисление всех подразделений, список divisions - сформирован пользовательским тегом show_divisions() в phonebook_tags.py -#}
 {% for di in divisions %}
+    {% if di.pk == div_selected %}
 
-  <!--  отображение списка подразделений через прямого обращение к номеру записи в базе данных -->
-  <!--  ссылка формируется через метод get_absolute_url описанного в классе Division файла models.py-->
-  <a href="{{ di.get_absolute_url }}" class="list-group-item list-group-item-action" name="orderby" >
+    <!--  отображение списка подразделений через прямого обращение к номеру записи в базе данных -->
+    <!--  ссылка формируется через метод get_absolute_url описанного в классе Division файла models.py-->
+    <a  class="list-group-item list-group-item-action" >
       <!--   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении-->
     {{ di.title }}
-  </a>
+    </a>
+   {% else %}
+        <a href="{{ di.get_absolute_url }}" class="list-group-item list-group-item-action" name="orderby" >
+      <!--   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении-->
+    {{ di.title }}
+    </a>
+    {% endif %}
+
 
 {% endfor %}
 </nav>
+<div>
+    <div>
+        <ul class="nav">
+            {% recursetree divisions %}
+                <li class="nav-item dropright">
+                    <a class="nav-link dropdown-toggle"  aria-expanded="false" href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+                    {% if not node.is_leaf_node %}
+                        <ul class="children">
+                            {{children}}
+                        </ul>
+                    {% endif %}
+                </li>
+            {% endrecursetree %}
+        </ul>
+    </div>
+</div>
+
+<div>
+    <div>
+        <ul class="nav">
+            {% recursetree divisions %}
+                {% if node.is_root_node %}
+                    {# Родительский элемент #}
+                    <li class="nav-item {% if node.slug == request.resolver_match.kwargs.div_slug %}active{% endif %}">
+                        <a class="nav-link" href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+                        {% if not node.is_leaf_node %}
+                            <ul class="children">
+                                {{children}}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endrecursetree %}
+        </ul>
+    </div>
+</div>
+

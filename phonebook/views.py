@@ -4,11 +4,6 @@ from django.views.generic import ListView
 from .models import *
 
 
-menu = [
-    {'title': "Добавить телефон", 'url_name': 'addphone'},
-    {'title': "Войти", 'url_name': 'login'},
-]
-
 class PhoneHome(ListView):
     model = PhoneNumber
     template_name = 'phonebook/index.html'
@@ -33,10 +28,21 @@ class PhoneDivision(ListView):
     model = PhoneNumber
     template_name = 'phonebook/index.html'
     context_object_name = 'posts'
+    extra_context = {'title': 'Телефонный справочник'}
     allow_empty = False
 
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['div_selected'] = context['posts'][0].division_id
+
+        division = Division.objects.get(slug=self.kwargs['div_slug'])
+        context['division'] = division
+        context['children_divisions'] = division.get_children()
+        return context
+
+
     def get_queryset(self):
-        return PhoneNumber.objects.filter(division__id=self.kwargs['div_id'], is_published=True)
+        return PhoneNumber.objects.filter(division__slug=self.kwargs['div_slug'], is_published=True)
 
 # def show_division(requests, div_id):
 #     posts = PhoneNumber.objects.filter(division=div_id)
@@ -50,11 +56,6 @@ class PhoneDivision(ListView):
 #     }
 #     return render(requests, 'phonebook/index.html', context=context)
 
-def addphone(requests):
-    return render(requests, 'phonebook/about.html', {'menu': menu, 'title': 'Добавить телефон'})
-
-def login(requests):
-    return HttpResponse("Авторизация")
 
 
 

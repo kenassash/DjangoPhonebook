@@ -1,4 +1,7 @@
 {% extends 'phonebook/base.html' %}
+{% load mptt_tags %}
+{#{% load phonebook_tags %}#}
+{#{% get_division as divisions %}#}
 
 {% block sidebar %}
 {% include 'phonebook/inc/_sidebar.html' %}
@@ -10,7 +13,25 @@
     <!--указываем тип таблицы   -->
     <table class="table table-striped">
 
-
+        <tr>
+            <td colspan="8">Подразделение: {{ division.title }}</td>
+        </tr>
+        <!-- информация о дочерних подразделениях -->
+        <!-- информация о дочерних подразделениях -->
+        {% if children_divisions %}
+        <tr>
+            <td colspan="8">
+                <strong>Дочерние подразделения:</strong>
+                <ul class="expandable-list">
+                {% for child in children_divisions %}
+                    <li>
+                        <a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endif %}
     <!--шапка таблицы-->
     <tr>
         <!--в каждом столбце прописываем значения-->
@@ -57,4 +78,5 @@
 {% endfor %}
     </table>
 </div>
+
 {% endblock %}

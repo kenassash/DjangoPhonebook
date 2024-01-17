@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from mptt.models import MPTTModel, TreeForeignKey
 
 
 class PhoneNumber(models.Model):
@@ -14,7 +15,9 @@ class PhoneNumber(models.Model):
     update_at = models.DateTimeField(auto_now=True, verbose_name="дата и время обновления")
 
     is_published = models.BooleanField(default=True, verbose_name="опубликовано")
-    division = models.ForeignKey('Division', on_delete=models.PROTECT, null=True, verbose_name='Наименование')
+
+    division = TreeForeignKey('Division', on_delete=models.PROTECT, null=True, verbose_name='Наименование')
+    slug = models.SlugField(max_length=150, blank=True, editable=False)
 
 
 
@@ -30,16 +33,21 @@ class PhoneNumber(models.Model):
         ordering = ['-create_at']
 
 
-class Division(models.Model):
+class Division(MPTTModel):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Наименование организации')
+    parent = TreeForeignKey('self', on_delete=models.PROTECT, null=True, blank=True, related_name='children',
+                            db_index=True, verbose_name='Родительская категория')
+    slug = models.SlugField()
+    class MPTTMeta:
+        order_insertion_by = ['title']
 
     def get_absolute_url(self):
-        return reverse('division', kwargs={"div_id": self.pk})
+        return reverse('division', kwargs={'div_slug': self.slug})
 
     def __str__(self):
         return self.title
 
     class Meta:
-        verbose_name = 'Организации'
-        verbose_name_plural = 'Организации'
-        ordering = ['id']
+        unique_together = [['parent', 'slug']]
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'

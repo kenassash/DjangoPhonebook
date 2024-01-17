@@ -1,11 +1,11 @@
 from django.contrib import admin
+from django_mptt_admin.admin import DjangoMpttAdmin
 
 from .models import *
 
 
 class PhoneAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'name',
         'surname',
         'second_name',
@@ -19,7 +19,6 @@ class PhoneAdmin(admin.ModelAdmin):
     )
 
     list_display_links = (
-        'id',
         'name',
     )
     search_fields = (
@@ -29,10 +28,9 @@ class PhoneAdmin(admin.ModelAdmin):
 
     list_editable = ('is_published',)
 
-class DivisionAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title')
-    list_display_links = ('id', 'title')
-    search_fields = ('id', 'title')
+
+class DivisionAdmin(DjangoMpttAdmin):
+    prepopulated_fields = {"slug": ("title",)}
 
 
 admin.site.register(PhoneNumber, PhoneAdmin)

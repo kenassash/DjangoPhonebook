@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'phonebook.apps.PhonebookConfig',
+    'mptt',
+    'django_mptt_admin',
+
 ]
 
 MIDDLEWARE = [
