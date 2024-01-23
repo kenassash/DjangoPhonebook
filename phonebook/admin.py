@@ -20,6 +20,7 @@ class PhoneAdmin(admin.ModelAdmin):
 
     list_display_links = (
         'name',
+        'surname',
     )
     search_fields = (
         'name',

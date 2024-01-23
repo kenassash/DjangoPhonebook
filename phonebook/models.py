@@ -18,9 +18,6 @@ class PhoneNumber(models.Model):
 
     division = TreeForeignKey('Division', on_delete=models.PROTECT, null=True, verbose_name='Наименование')
     slug = models.SlugField(max_length=150, blank=True, editable=False)
-
-
-
     def get_absolute_url(self):
         return reverse('user_data', kwargs={"post_id": self.pk})
 
