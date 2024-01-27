@@ -58,19 +58,34 @@
 <!--  </div>-->
 <!--{% endrecursetree %}-->
 
-<div class="menu" id="menuul">
-{% for division,structure in divisions|tree_info %}
-    {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %}
-        {{ division.title }}
-    {% for level in structure.closed_levels %}</li></ul>{% endfor %}
-{% endfor %}
+{#<div class="menu" id="menuul" >#}
+{#{% for division,structure in divisions|tree_info %}#}
+{#    {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %}#}
+{#        {{ division.title }}#}
+{#    {% for level in structure.closed_levels %}</li></ul>{% endfor %}#}
+{#{% endfor %}#}
+{#</div>#}
+<div class="menu" id="menuul" >
+<ul>
+    {% recursetree divisions %}
+        <li>
+            {{ node.title }}
+         <hr class="dropdown-divider">
+            {% if not node.is_leaf_node %}
+                <ul class="children" >
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>
 </div>
 
-<!--мои контакты если что +79526886210 viber whatsapp-->
 <script>
     let menu = document.querySelector("#menuul");
     for (let li of menu.querySelectorAll("li")){
         let span = document.createElement('span');
+        {#span.classList.add('list');#}
         span.classList.add('show');
         li.prepend(span);
         span.append(span.nextSibling);
@@ -80,7 +95,7 @@ menu.onclick = function (event) {
      if (event.target.tagName != 'SPAN') return;
      let childcont = event.target.parentNode.querySelector("ul");
      if (!childcont) return;
-     childcont.hidden = !childcont.hidden;
+     {#childcont.hidden = !childcont.hidden;#}
+     childcont.classList.toggle('children');
 }
-
 </script>
