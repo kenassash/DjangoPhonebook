@@ -5,82 +5,55 @@
 {% get_division as divisions %}
 {% load mptt_tags %}
 
-<!--{#<nav class="nav flex-column">#}-->
-<!--{##}-->
-<!--{#  <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Наименование:</a>#}-->
-<!--{##}-->
-<!--{#   &lt;!&ndash;запускаем пользовательский тег show_divisions, каторый данные загружает уже со страницы 'phonebook/list_divisions.html'&ndash;&gt;#}-->
-<!--{##}-->
-<!--{##}-->
-<!--{#- Перечисление всех подразделений, список divisions - сформирован пользовательским тегом show_divisions() в phonebook_tags.py -#}-->
-<!--{#{% for di in divisions %}#}-->
-<!--{#    {% if di.pk == div_selected %}#}-->
-<!--{##}-->
-<!--{#    &lt;!&ndash;  отображение списка подразделений через прямого обращение к номеру записи в базе данных &ndash;&gt;#}-->
-<!--{#    &lt;!&ndash;  ссылка формируется через метод get_absolute_url описанного в классе Division файла models.py&ndash;&gt;#}-->
-<!--{#    <a  class="list-group-item list-group-item-action" >#}-->
-<!--{#      &lt;!&ndash;   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении&ndash;&gt;#}-->
-<!--{#    {{ di.title }}#}-->
-<!--{#    </a>#}-->
-<!--{#   {% else %}#}-->
-<!--{#        <a href="{{ di.get_absolute_url }}" class="list-group-item list-group-item-action" name="orderby" >#}-->
-<!--{#      &lt;!&ndash;   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении&ndash;&gt;#}-->
-<!--{#    {{ di.title }}#}-->
-<!--{#    </a>#}-->
-<!--{#    {% endif %}#}-->
-<!--{##}-->
-<!--{#{% endfor %}#}-->
-<!--{#</nav>#}-->
+{#<nav class="nav flex-column">#}
+{##}
+{#  <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Наименование:</a>#}
+{##}
+{#   <!--запускаем пользовательский тег show_divisions, каторый данные загружает уже со страницы 'phonebook/list_divisions.html'-->#}
+{##}
+{##}
+{#- Перечисление всех подразделений, список divisions - сформирован пользовательским тегом show_divisions() в phonebook_tags.py -#}
+{#{% for di in divisions %}#}
+{#    {% if di.pk == div_selected %}#}
+{##}
+{#    <!--  отображение списка подразделений через прямого обращение к номеру записи в базе данных -->#}
+{#    <!--  ссылка формируется через метод get_absolute_url описанного в классе Division файла models.py-->#}
+{#    <a  class="list-group-item list-group-item-action" >#}
+{#      <!--   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении-->#}
+{#    {{ di.title }}#}
+{#    </a>#}
+{#   {% else %}#}
+{#        <a href="{{ di.get_absolute_url }}" class="list-group-item list-group-item-action" name="orderby" >#}
+{#      <!--   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении-->#}
+{#    {{ di.title }}#}
+{#    </a>#}
+{#    {% endif %}#}
+{##}
+{#{% endfor %}#}
+{#</nav>#}
 
-<!--{% recursetree divisions %}-->
-<!--    <div class="accordion" id="accordionExample">-->
-<!--    <div class="accordion-item">-->
-<!--      <h2 class="accordion-header" id="headingOne">-->
-<!--        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ node.id }}" aria-expanded="true" aria-controls="collapse{{ node.id }}">-->
-<!--          {{ node.title }}-->
-<!--        </button>-->
+{% recursetree divisions %}
+    <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ node.id }}" aria-expanded="true" aria-controls="collapse{{ node.id }}">
+          {{ node.title }}
+        </button>
 
-<!--      </h2>-->
-<!--      {% if not node.is_leaf_node %}-->
-<!--        <div id="collapse{{ node.id }}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">-->
-<!--          <div class="accordion-body">-->
-<!--            {% for child in node.get_children %}-->
-<!--                {% if child.pk == div_selected %}-->
-<!--                    {{ child.title }}<br>-->
-<!--                {% else %}-->
-<!--                <a href="{{ child.get_absolute_url }}">{{ child.title }}</a><br>-->
-<!--                {% endif %}-->
-<!--            {% endfor %}-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      {% endif %}-->
-<!--    </div>-->
-<!--  </div>-->
-<!--{% endrecursetree %}-->
-
-<div class="menu" id="menuul">
-{% for division,structure in divisions|tree_info %}
-    {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %}
-        {{ division.title }}
-    {% for level in structure.closed_levels %}</li></ul>{% endfor %}
-{% endfor %}
-</div>
-
-<!--мои контакты если что +79526886210 viber whatsapp-->
-<script>
-    let menu = document.querySelector("#menuul");
-    for (let li of menu.querySelectorAll("li")){
-        let span = document.createElement('span');
-        span.classList.add('show');
-        li.prepend(span);
-        span.append(span.nextSibling);
-    }
-menu.onclick = function (event) {
-     console.log(event.target.tagName);
-     if (event.target.tagName != 'SPAN') return;
-     let childcont = event.target.parentNode.querySelector("ul");
-     if (!childcont) return;
-     childcont.hidden = !childcont.hidden;
-}
-
-</script>
+      </h2>
+      {% if not node.is_leaf_node %}
+        <div id="collapse{{ node.id }}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {% for child in node.get_children %}
+                {% if child.pk == div_selected %}
+                    {{ child.title }}<br>
+                {% else %}
+                <a href="{{ child.get_absolute_url }}">{{ child.title }}</a><br>
+                {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endrecursetree %}
