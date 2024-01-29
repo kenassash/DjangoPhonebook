@@ -66,36 +66,65 @@
 {#{% endfor %}#}
 {#</div>#}
 <div class="menu" id="menuul" >
+<!--<div  id="s" >{{div_selected}}</div>-->
 <ul>
     {% recursetree divisions %}
+<!--<button type="button">+</button>-->
         <li>
+            {% if node.id == div_selected %}
             {{ node.title }}
+
+            {% else %}
+            <a href="{{ node.get_absolute_url }}" >{{ node.title }}</a>
+            {% endif %}
          <hr class="dropdown-divider">
             {% if not node.is_leaf_node %}
-                <ul class="children" >
+                {% if node.id == div_selected %}
+                <ul class="children"  >
                     {{ children }}
+
+                </ul>
+             {% else %}
+                <ul class="children"  >
+                   <a href="{{ children.get_absolute_url }}" > {{ children }}</a>
                 </ul>
             {% endif %}
+            {% endif %}
         </li>
+
     {% endrecursetree %}
 </ul>
 </div>
 
 <script>
     let menu = document.querySelector("#menuul");
+
+
+
     for (let li of menu.querySelectorAll("li")){
+        for (let b of li.querySelectorAll("a")){
+            // b.classList.toggle('children');
+
+            if (b == null) {
+
+                c = b.parentNode.querySelector("ul");
+                c.classList.toggle('children');
+            }
+        }
         let span = document.createElement('span');
         {#span.classList.add('list');#}
         span.classList.add('show');
         li.prepend(span);
         span.append(span.nextSibling);
+
     }
 menu.onclick = function (event) {
      console.log(event.target.tagName);
      if (event.target.tagName != 'SPAN') return;
      let childcont = event.target.parentNode.querySelector("ul");
+     // alert(childcont.length);
      if (!childcont) return;
-     {#childcont.hidden = !childcont.hidden;#}
+     // childcont.hidden = !childcont.hidden;
      childcont.classList.toggle('children');
 }
 </script>
