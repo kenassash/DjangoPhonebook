@@ -35,9 +35,8 @@ class PhoneDivision(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         if context['posts']:
-            context['div_selected'] = context['posts'][0].division_id
-        else:
-            context['div_selected'] = None
+            context['div_selected'] = context['posts'][0].id
+
 
         division = Division.objects.get(slug=self.kwargs['div_slug'])
         context['division'] = division
@@ -46,7 +45,15 @@ class PhoneDivision(ListView):
 
 
     def get_queryset(self):
-        return PhoneNumber.objects.filter(division__slug=self.kwargs['div_slug'], is_published=True)
+        # Получение номеров телефонов и подразделений в отдельных запросах
+        phone_numbers = PhoneNumber.objects.filter(division__slug=self.kwargs['div_slug'], is_published=True)
+        divisions = Division.objects.filter(slug=self.kwargs['div_slug'])
+
+        # Комбинирование результатов в один список
+        queryset = list(phone_numbers) + list(divisions)
+
+        return queryset
+
 
     def get(self, request, *args, **kwargs):
         try:

@@ -57,3 +57,99 @@
     </div>
   </div>
 {% endrecursetree %}
+
+<style>
+    ul, #myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+}
+</style>
+
+<ul id="myUL">
+    {% recursetree divisions %}
+        <li>
+            {% if node.is_leaf_node %}
+                <a class="leaf" href="{{  node.get_absolute_url }}">{{ node.title }}</a>
+            {% else %}
+                <span class="caret parent" href="{{  node.get_absolute_url }}">{{ node.title }}</span>
+                <ul class="nested">
+                    {{ children }}
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>
+
+
+
+<script>
+    'use strict';
+
+var togglers = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < togglers.length; i++) {
+    togglers[i].addEventListener("click", function () {
+        this.parentElement.querySelector(".nested").classList.toggle("active");
+        this.classList.toggle("caret-down");
+    });
+}
+</script>
+
+{% recursetree divisions %}
+                            <!-- блок аккордеон -->
+                            <div class="accordion">
+                                <section class="accordion_item">
+                                    <h3 class="title_block"><strong>{{ node.title }}</strong></h3>
+                                    {% if not node.is_leaf_node %}
+                                        {% for child in node.children.all %}
+                                            <div class="info"><hr>
+                                                <ul>
+                                                    <li class="info_item"><a href="{{ child.get_absolute_url }}"><u>{{ child.title }}</u></a></li>
+                                                </ul>
+                                                {% recursetree child.children.all %}
+                                                    <ul>
+                                                        <li class="info"><a href="{{ node.get_absolute_url }}">{{ node.title }}</a></li>
+                                                    </ul>
+                                                {% endrecursetree %}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                </section>
+                            </div>
+                            <!-- конец блока аккордеон -->
+                        {% endrecursetree %}

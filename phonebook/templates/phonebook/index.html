@@ -25,12 +25,14 @@
                 <ul class="expandable-list">
                 {% for child in children_divisions %}
                     <li>
-                        <a href="{{ child.get_absolute_url }}">{{ child.title }}</a>
+                        <a href="{{ child.get_absolute_url }}">{{ child.title }} </a>
                     </li>
                 {% endfor %}
                 </ul>
             </td>
         </tr>
+        {% else %}
+         {{ children }}   
         {% endif %}
     <!--шапка таблицы-->
     <tr>

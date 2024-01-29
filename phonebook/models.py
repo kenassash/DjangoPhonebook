@@ -34,7 +34,7 @@ class Division(MPTTModel):
     title = models.CharField(max_length=150, db_index=True, verbose_name='Наименование организации')
     parent = TreeForeignKey('self', on_delete=models.PROTECT, null=True, blank=True, related_name='children',
                             db_index=True, verbose_name='Родительская категория')
-    slug = models.SlugField()
+    slug = models.SlugField(max_length=150, blank=True, editable=False)
     class MPTTMeta:
         order_insertion_by = ['title']
 
