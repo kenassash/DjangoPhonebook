@@ -75,7 +75,7 @@
             {{ node.title }}
 
             {% else %}
-            <a href="{{ node.get_absolute_url }}" >{{ node.title }}</a>
+           <span> <a href="{{ node.get_absolute_url }}" >{{ node.title }}</a></span>
             {% endif %}
          <hr class="dropdown-divider">
             {% if not node.is_leaf_node %}
@@ -98,33 +98,58 @@
 
 <script>
     let menu = document.querySelector("#menuul");
+    menu.onclick = function (event) {
+        let t = event.target.childNodes;
+        // if (t.tagName == 'LI') return;
+        // let c = t.document.querySelector("ul");
+        // t["ul.children"].toggle('children');
+        // let child = Array.from(t);
+        // child[1].classList.toggle('children');
+        // let position = child.tagName.indexOf("ul.children");
 
+        alert(t.indexOf("ul"));
 
-
-    for (let li of menu.querySelectorAll("li")){
-        for (let b of li.querySelectorAll("a")){
-            // b.classList.toggle('children');
-
-            if (b == null) {
-
-                c = b.parentNode.querySelector("ul");
-                c.classList.toggle('children');
-            }
-        }
-        let span = document.createElement('span');
-        {#span.classList.add('list');#}
-        span.classList.add('show');
-        li.prepend(span);
-        span.append(span.nextSibling);
-
+for (let i = 0; i < t.length; i++) {
+    if (t.item(i) == "ul"){
+        console.log("123");
     }
-menu.onclick = function (event) {
-     console.log(event.target.tagName);
-     if (event.target.tagName != 'SPAN') return;
-     let childcont = event.target.parentNode.querySelector("ul");
-     // alert(childcont.length);
-     if (!childcont) return;
-     // childcont.hidden = !childcont.hidden;
-     childcont.classList.toggle('children');
+        // alert(t.item(i));
+        // console.log(t.item(i));
+
 }
+    // b = t.item(1);
+    // b.classList.toggle('children');
+        // alert(t[3]);
+        // console.log(t.tagName);
+        // b.classList.toggle('children');
+    }
+
+
+
+//     for (let li of menu.querySelectorAll("li")){
+//         for (let b of li.querySelectorAll("a")){
+//             // b.classList.toggle('children');
+//
+//             if (b == null) {
+//
+//                 c = b.parentNode.querySelector("ul");
+//                 c.classList.toggle('children');
+//             }
+//         }
+//         let span = document.createElement('span');
+//         {#span.classList.add('list');#}
+//         span.classList.add('show');
+//         li.prepend(span);
+//         span.append(span.nextSibling);
+//
+//     }
+// menu.onclick = function (event) {
+//      console.log(event.target.tagName);
+//      if (event.target.tagName != 'SPAN') return;
+//      let childcont = event.target.parentNode.querySelector("ul");
+//      // alert(childcont.length);
+//      if (!childcont) return;
+//      // childcont.hidden = !childcont.hidden;
+//      childcont.classList.toggle('children');
+// }
 </script>
