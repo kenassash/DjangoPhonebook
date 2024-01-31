@@ -69,48 +69,76 @@
 <!--<div  id="s" >{{div_selected}}</div>-->
 <ul>
     {% recursetree divisions %}
-<!--<button type="button">+</button>-->
+
         <li>
-            {% if node.id == div_selected %}
-            {{ node.title }}
-
-            {% else %}
-           <span> <a href="{{ node.get_absolute_url }}" >{{ node.title }}</a></span>
-            {% endif %}
-         <hr class="dropdown-divider">
+            <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
             {% if not node.is_leaf_node %}
-                {% if node.id == div_selected %}
-                <ul class="children"  >
+                <ul >
                     {{ children }}
-
                 </ul>
-             {% else %}
-                <ul class="children"  >
-                   <a href="{{ children.get_absolute_url }}" > {{ children }}</a>
-                </ul>
-            {% endif %}
             {% endif %}
         </li>
+
+
 
     {% endrecursetree %}
 </ul>
 </div>
 
 <script>
-    let menu = document.querySelector("#menuul");
+let menu = document.querySelector("#menuul");
+let u = window.location.href;
+let s = menu.querySelectorAll(" li > a");
+
+// let child = Array.from(menu);
+console.log("123" + s.length);
+for (let m of s){
+    // let z = m.childNodes;
+    console.log("содержимое children " + m);
+    // for (let v of z){
+    //     // console.log("содержимое children " + v.href);
+    // }
+
+    if (m.href == u){
+         // m = m.firstChild;
+
+         // m.classList.add("children");
+         // m.hidden;
+        // console.log("z " + m);
+    }
+}
+
+
+    // let link = menu.querySelectorAll("span");
+    // for (let l of link){
+    //     // console.log(l);
+    //     if(l.querySelector("a") == null){
+    //         // alert("123");
+    //         console.log(l.querySelector('first-of-type'));
+    //         l.querySelector('span:first-of-type').toggle('children');
+    //
+    //     }
+    //     // alert(l);
+    //
+    //     // if (l.querySelector('a:first-of-type').tagName == "a"){
+    //     //     alert('123');
+    //     // }
+    // }
+
     menu.onclick = function (event) {
-        let t = event.target.childNodes;
+        // let t = event.target.childNodes;
+        let t = event.target.querySelector('ul:first-of-type');
         // if (t.tagName == 'LI') return;
         // let c = t.document.querySelector("ul");
         // t["ul.children"].toggle('children');
         // let child = Array.from(t);
         // child[1].classList.toggle('children');
         // let position = child.tagName.indexOf("ul.children");
+        // alert(t.tagName);
 
-        alert(t.indexOf("ul"));
 
 for (let i = 0; i < t.length; i++) {
-    if (t.item(i) == "ul"){
+    if (t.nodeName == "ul.children"){
         console.log("123");
     }
         // alert(t.item(i));
@@ -118,7 +146,7 @@ for (let i = 0; i < t.length; i++) {
 
 }
     // b = t.item(1);
-    // b.classList.toggle('children');
+    t.classList.toggle('children');
         // alert(t[3]);
         // console.log(t.tagName);
         // b.classList.toggle('children');
