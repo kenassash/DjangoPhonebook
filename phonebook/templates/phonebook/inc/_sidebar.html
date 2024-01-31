@@ -66,45 +66,46 @@
 {#{% endfor %}#}
 {#</div>#}
 <div class="menu" id="menuul" >
-<!--<div  id="s" >{{div_selected}}</div>-->
-<ul>
-    {% recursetree divisions %}
 
-        <li>
-            <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
-            {% if not node.is_leaf_node %}
-                <ul >
-                    {{ children }}
-                </ul>
-            {% endif %}
-        </li>
-
-
-
-    {% endrecursetree %}
-</ul>
+    <ul>
+        {% recursetree divisions %}
+            <li>
+                <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+                {% if not node.is_leaf_node %}
+                    <ul class="children">
+                        {{ children }}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endrecursetree %}
+    </ul>
 </div>
 
 <script>
 let menu = document.querySelector("#menuul");
 let u = window.location.href;
-let s = menu.querySelectorAll(" li > a");
+let s = menu.querySelectorAll(" a ");
 
 // let child = Array.from(menu);
-console.log("123" + s.length);
+{#console.log("123" + s);#}
 for (let m of s){
-    // let z = m.childNodes;
-    console.log("содержимое children " + m);
-    // for (let v of z){
-    //     // console.log("содержимое children " + v.href);
-    // }
+
 
     if (m.href == u){
-         // m = m.firstChild;
 
-         // m.classList.add("children");
+       let ng =  m.parentNode.querySelectorAll("ul");
+       let li = m.parentNode.querySelector("li > a");
+       li.removeAttribute("href");
+       {#console.log(ng);#}
+
+       ng[0].classList.toggle("children");
+        for (let ch of ng){
+            console.log(ch.href);
+
+        }
+          {#m.classList.add("child");#}
          // m.hidden;
-        // console.log("z " + m);
+         {#console.log("z " + m);#}
     }
 }
 
