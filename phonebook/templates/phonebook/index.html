@@ -14,14 +14,14 @@
     <table class="table table-striped">
 
         <tr>
-            <td colspan="8">Подразделение: {{ division.title }}</td>
+            <td colspan="8">Наименование: {{ division.title }}</td>
         </tr>
         <!-- информация о дочерних подразделениях -->
         <!-- информация о дочерних подразделениях -->
         {% if children_divisions %}
         <tr>
             <td colspan="8">
-                <strong>Дочерние подразделения:</strong>
+                <strong>Отделы:</strong>
                 <ul class="expandable-list">
                 {% for child in children_divisions %}
                     <li>
@@ -31,9 +31,9 @@
                 </ul>
             </td>
         </tr>
-        {% else %}
-         {{ children }}   
         {% endif %}
+
+
     <!--шапка таблицы-->
     <tr>
         <!--в каждом столбце прописываем значения-->
@@ -69,7 +69,7 @@
         <!--в каждом столбце прописываем должность-->
         <td> {{item.position}}</td>
         <!--в каждом столбце прописываем подразделение-->
-        <td> {{item.phone }}</td>
+        <td>{{ item.phone }}</td>
         <!--в каждом столбце прописываем значения внутр телефон-->
         <td> {{item.short_phone}}</td>
         <!--в каждом столбце прописываем значения городской телефон-->
@@ -80,5 +80,7 @@
 {% endfor %}
     </table>
 </div>
-
+            {% for division in queryset %}
+                <li>{{ division.title }}</li>
+            {% endfor %}
 {% endblock %}

@@ -6,8 +6,8 @@ from .models import *
 
 class PhoneAdmin(admin.ModelAdmin):
     list_display = (
-        'name',
         'surname',
+        'name',
         'second_name',
         'position',
         'phone',
@@ -19,12 +19,15 @@ class PhoneAdmin(admin.ModelAdmin):
     )
 
     list_display_links = (
-        'name',
         'surname',
+        'name',
+        'second_name',
+
     )
     search_fields = (
-        'name',
         'surname',
+        'name',
+        'second_name',
     )
 
     list_editable = ('is_published',)

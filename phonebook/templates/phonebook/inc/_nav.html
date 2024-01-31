@@ -30,16 +30,17 @@
 
                     <!--выпадающее меню-->
 
-                    <li>
-                        <!--поисковая форма-->
-                        <form class="d-flex">
-                        <!--окно ввода-->
-                        <input class="form-control me-2"  type="search" placeholder="примеры: Иван Волков" aria-label="Search" style="width: 520px; background-color: rgba(255,255,255, 1)">
-                        <!--кнопка поиска-->
-                        <button class="btn btn-outline-success" type="search"><small>Поиск</small></button>
-                        <!--кнопка сброса-->
-                        <button class="btn btn-outline-success" type="reset"><small>Сброс</small></button>
-                    </li>
+<li>
+    <!-- Поисковая форма -->
+    <form class="d-flex" method="get" action="{% url 'home' %}">
+        <!-- Окно ввода -->
+        <input class="form-control me-2" name="q" type="search" placeholder="примеры: Иван Волков" aria-label="Search" style="width: 520px; background-color: rgba(255,255,255, 1)">
+        <!-- Кнопка поиска -->
+        <button class="btn btn-outline-success" type="submit"><small>Поиск</small></button>
+        <!-- Кнопка сброса -->
+        <button class="btn btn-outline-success" type="reset"><small>Сброс</small></button>
+    </form>
+</li>
 
 <!--                    &lt;!&ndash;не активная ссылка&ndash;&gt;-->
 <!--                    <li class="nav-item">-->
