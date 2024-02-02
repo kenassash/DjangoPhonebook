@@ -85,39 +85,58 @@
 let menu = document.querySelector("#menuul");
 let u = window.location.href;
 let s = menu.querySelectorAll(" a ");
-
-// let child = Array.from(menu);
-console.log("123" + s);
-for (let m of s){
-    console.log(m);
-
-    if (m.href == u){
-
-       let ng =  m.parentNode.querySelectorAll("ul");
-       let li = m.parentNode.querySelector("li > a");
-       {#li.removeAttribute("href");#} //Удаление ссылки
-       {#console.log(ng);#}
-        for (let g of ng){
-            {#console.log(g);#}
-        }
-
-       ng[0].classList.toggle("children");
-
-       {#console.log(ng);#}
-        for (let ch of ng){
-            {#let x = ch.parentNode.querySelector("a");#}
-            if (x.href == u){
-                console.log("123");
-            }
-           {#console.log(ch);#}
-
-
-        }
-          {#m.classList.add("child");#}
-         // m.hidden;
-         {#console.log("z " + m);#}
-    }
+let hide = menu.querySelectorAll(".children");
+for (let h of hide){
+    h.classList.add("child");
 }
+
+for (let m of s){
+    if (m.href == u){
+           let ng =  m.parentNode.querySelectorAll("ul");
+           let li = m.parentNode.querySelector("li > a");
+           li.removeAttribute("href"); //Удаление ссылки
+            console.log(ng.closest());
+           for (let c of ng) {
+               let iterator = 0;
+               iterator++;
+                console.log(c.className);
+               let l = c.querySelector("a");
+               if (c.className == "children child"){
+                   c.classList.remove("child");
+
+               }
+
+               {#c.style.display = "none";#}
+               if (l.href == u){
+                   c.classList.remove("children");
+                   break;
+               }
+
+
+
+           }
+
+
+
+
+    }
+
+}
+
+menu.onclick = function (event) {
+    // let t = event.target.childNodes;
+    let t = event.target;
+    console.log("t" + t);
+    // if (t.tagName == 'LI') return;
+    // let c = t.document.querySelector("ul");
+    // t["ul.children"].toggle('children');
+    // let child = Array.from(t);
+    {#child[1].classList.toggle('children');#}
+    // let position = child.tagName.indexOf("ul.children");
+    // alert(t.tagName);
+}
+
+
 
 
     // let link = menu.querySelectorAll("span");
@@ -136,45 +155,18 @@ for (let m of s){
     //     // }
     // }
 
-    menu.onclick = function (event) {
-        // let t = event.target.childNodes;
-        let t = event.target.querySelector('ul:first-of-type');
-        // if (t.tagName == 'LI') return;
-        // let c = t.document.querySelector("ul");
-        // t["ul.children"].toggle('children');
-        // let child = Array.from(t);
-        // child[1].classList.toggle('children');
-        // let position = child.tagName.indexOf("ul.children");
-        // alert(t.tagName);
 
-
-for (let i = 0; i < t.length; i++) {
-    if (t.nodeName == "ul.children"){
-        console.log("123");
-    }
-        // alert(t.item(i));
-        // console.log(t.item(i));
-
-}
     // b = t.item(1);
-    t.classList.toggle('children');
+    {#t.classList.toggle('children');#}
         // alert(t[3]);
         // console.log(t.tagName);
         // b.classList.toggle('children');
-    }
+
 
 
 
 //     for (let li of menu.querySelectorAll("li")){
 //         for (let b of li.querySelectorAll("a")){
-//             // b.classList.toggle('children');
-//
-//             if (b == null) {
-//
-//                 c = b.parentNode.querySelector("ul");
-//                 c.classList.toggle('children');
-//             }
-//         }
 //         let span = document.createElement('span');
 //         {#span.classList.add('list');#}
 //         span.classList.add('show');

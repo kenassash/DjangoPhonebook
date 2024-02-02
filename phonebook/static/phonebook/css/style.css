@@ -5,7 +5,7 @@ body{
     color: red;
 }
 
-.children{
+.child{
     display: none;
     /*скрытие элементов списка*/
 }
