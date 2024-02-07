@@ -70,7 +70,12 @@
     <ul>
         {% recursetree divisions %}
             <li>
+            {% if node.new_level == true %}
+                <span class="parent">   <a href="{{ node.get_absolute_url }}">{{ node.title }}</a></span>
+            {% else %}
                 <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+            {% endif %}
+
                 {% if not node.is_leaf_node %}
                     <ul class="children">
                         {{ children }}
@@ -86,35 +91,59 @@ let menu = document.querySelector("#menuul");
 let u = window.location.href;
 let s = menu.querySelectorAll(" a ");
 let hide = menu.querySelectorAll(".children");
-for (let h of hide){
-    h.classList.add("child");
-}
+let k = menu.querySelector("ul>li");
+ let par = null;
+{#for (let h of hide){#}
+{#h.classList.remove("children");#}
+{#}#}
 
+
+
+//начало
 for (let m of s){
+
     if (m.href == u){
            let ng =  m.parentNode.querySelectorAll("ul");
            let li = m.parentNode.querySelector("li > a");
            li.removeAttribute("href"); //Удаление ссылки
-            console.log(ng.closest());
-           for (let c of ng) {
-               let iterator = 0;
-               iterator++;
-                console.log(c.className);
-               let l = c.querySelector("a");
-               if (c.className == "children child"){
-                   c.classList.remove("child");
 
-               }
+        for (let n in m) {
+         par = m.parentNode;
 
+         console.log(par);
+            if(par.className != "children") {
+                break;
+            }
+
+         }
+
+        for (let f of par.querySelectorAll(".children")){
+          let link = f.querySelector("a").href;
+
+          f.classList.remove("children");
+          if (link == u) {
+              break;
+          }
+        }
+
+
+           {#for (let c of ng) {#}
+                {#console.log(c.tagName);#}
+           {#    let l = c.querySelector("a");#}
+           {#    if (c.className == "children child"){#}
+           {#        c.classList.remove("child");#}
+           {##}
+           {#    }#}
+           {##}
                {#c.style.display = "none";#}
-               if (l.href == u){
-                   c.classList.remove("children");
-                   break;
-               }
-
-
-
-           }
+           {#    if (l.href == u){#}
+           {#        c.classList.remove("children");#}
+           {#        break;#}
+           {#    }#}
+           {##}
+           {##}
+           {##}
+           {#}#}
 
 
 
