@@ -106,37 +106,50 @@ let k = menu.querySelector("ul>li");
 for (let m of s){
 
     if (m.href == u){
-           let ng =  m.parentNode.querySelectorAll("ul");
-           let li = m.parentNode.querySelector("a");
-           console.log(li);
-           li.removeAttribute("href"); //Удаление ссылки
+           {#let ng =  m.childNodes;#}
+           {#ng.classList.remove("children");#}
+           let a = m.parentNode.querySelector("a");
+           {#console.log(a);#}
+           {#a.removeAttribute("href"); //Удаление ссылки#}
         let par = m.closest(".parent");//Получаем родителя по селектору
-        console.log("par " + par.tagName);
-        {#for (let n in m) {#}
-        {# par = m.parentNode;#}
-        {##}
-        {#    console.log("par" + par);#}
-        {#    if(par.className == ".parent") {#}
-        {#        par = m.parentNode;#}
-        {##}
-        {#        break;#}
-        {#    }#}
-        {##}
-        {# }#}
 
+        let tt = par.querySelectorAll("a");
+        for (let g of tt){
 
+               {#g.classList.remove("children");#}
+               {# let x = g.parentNode.querySelector("ul");#}
+               {# if (false == x.firstChild ){#}
+               {#     console.log("srabotalo");#}
+               {# }#}
+                    if (g.href == u){
+                       let fin = g.parentNode.querySelector("ul");
+                        fin.classList.remove("children");
+                        g.removeAttribute("href");
 
+                        break;
+                    }
+                    else {
+                        let fin = g.parentNode.querySelector("ul");
+                        fin.classList.remove("children");
+                    }
 
-
-
-        for (let f of par.querySelectorAll(".children")){
-          let link = f.querySelector("a").href;
-
-          f.classList.remove("children");
-          if (link == u) {
-              break;
-          }
         }
+
+
+
+
+
+
+
+
+        {#for (let f of par.querySelectorAll(".children")){#}
+        {#  let link = f.querySelector("a").href;#}
+        {##}
+        {#  f.classList.remove("children");#}
+        {#  if (link == u) {#}
+        {#      break;#}
+        {#  }#}
+        {#}#}
 
 
            {#for (let c of ng) {#}
