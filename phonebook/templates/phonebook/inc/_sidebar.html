@@ -70,8 +70,8 @@
     <ul>
         {% recursetree divisions %}
             <li>
-            {% if node.new_level == true %}
-                <span class="parent">   <a href="{{ node.get_absolute_url }}">{{ node.title }}</a></span>
+            {% if node.is_root_node == True %}
+                <span class="parent">   <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
             {% else %}
                 <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
             {% endif %}
@@ -81,6 +81,9 @@
                         {{ children }}
                     </ul>
                 {% endif %}
+            {% if node.is_root_node == True %}
+                </span>
+            {% endif %}
             </li>
         {% endrecursetree %}
     </ul>
@@ -104,18 +107,27 @@ for (let m of s){
 
     if (m.href == u){
            let ng =  m.parentNode.querySelectorAll("ul");
-           let li = m.parentNode.querySelector("li > a");
+           let li = m.parentNode.querySelector("a");
+           console.log(li);
            li.removeAttribute("href"); //Удаление ссылки
+        let par = m.closest(".parent");//Получаем родителя по селектору
+        console.log("par " + par.tagName);
+        {#for (let n in m) {#}
+        {# par = m.parentNode;#}
+        {##}
+        {#    console.log("par" + par);#}
+        {#    if(par.className == ".parent") {#}
+        {#        par = m.parentNode;#}
+        {##}
+        {#        break;#}
+        {#    }#}
+        {##}
+        {# }#}
 
-        for (let n in m) {
-         par = m.parentNode;
 
-         console.log(par);
-            if(par.className != "children") {
-                break;
-            }
 
-         }
+
+
 
         for (let f of par.querySelectorAll(".children")){
           let link = f.querySelector("a").href;
@@ -152,10 +164,10 @@ for (let m of s){
 
 }
 
-menu.onclick = function (event) {
+{#menu.onclick = function (event) {#}
     // let t = event.target.childNodes;
-    let t = event.target;
-    console.log("t" + t);
+    {#let t = event.target;#}
+    {#console.log("t" + t);#}
     // if (t.tagName == 'LI') return;
     // let c = t.document.querySelector("ul");
     // t["ul.children"].toggle('children');
@@ -163,7 +175,7 @@ menu.onclick = function (event) {
     {#child[1].classList.toggle('children');#}
     // let position = child.tagName.indexOf("ul.children");
     // alert(t.tagName);
-}
+{#}#}
 
 
 
