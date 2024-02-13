@@ -5,75 +5,18 @@
 {% get_division as divisions %}
 {% load mptt_tags %}
 
-<!--{#<nav class="nav flex-column">#}-->
-<!--{##}-->
-<!--{#  <a class="nav-link disabled" tabindex="-1" aria-disabled="true">Наименование:</a>#}-->
-<!--{##}-->
-<!--{#   &lt;!&ndash;запускаем пользовательский тег show_divisions, каторый данные загружает уже со страницы 'phonebook/list_divisions.html'&ndash;&gt;#}-->
-<!--{##}-->
-<!--{##}-->
-<!--{#- Перечисление всех подразделений, список divisions - сформирован пользовательским тегом show_divisions() в phonebook_tags.py -#}-->
-<!--{#{% for di in divisions %}#}-->
-<!--{#    {% if di.pk == div_selected %}#}-->
-<!--{##}-->
-<!--{#    &lt;!&ndash;  отображение списка подразделений через прямого обращение к номеру записи в базе данных &ndash;&gt;#}-->
-<!--{#    &lt;!&ndash;  ссылка формируется через метод get_absolute_url описанного в классе Division файла models.py&ndash;&gt;#}-->
-<!--{#    <a  class="list-group-item list-group-item-action" >#}-->
-<!--{#      &lt;!&ndash;   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении&ndash;&gt;#}-->
-<!--{#    {{ di.title }}#}-->
-<!--{#    </a>#}-->
-<!--{#   {% else %}#}-->
-<!--{#        <a href="{{ di.get_absolute_url }}" class="list-group-item list-group-item-action" name="orderby" >#}-->
-<!--{#      &lt;!&ndash;   di.title - обращение к имени подразделения, di.cnt - подсчет записи в этом подразделении&ndash;&gt;#}-->
-<!--{#    {{ di.title }}#}-->
-<!--{#    </a>#}-->
-<!--{#    {% endif %}#}-->
-<!--{##}-->
-<!--{#{% endfor %}#}-->
-<!--{#</nav>#}-->
 
-<!--{% recursetree divisions %}-->
-<!--    <div class="accordion" id="accordionExample">-->
-<!--    <div class="accordion-item">-->
-<!--      <h2 class="accordion-header" id="headingOne">-->
-<!--        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ node.id }}" aria-expanded="true" aria-controls="collapse{{ node.id }}">-->
-<!--          {{ node.title }}-->
-<!--        </button>-->
-
-<!--      </h2>-->
-<!--      {% if not node.is_leaf_node %}-->
-<!--        <div id="collapse{{ node.id }}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">-->
-<!--          <div class="accordion-body">-->
-<!--            {% for child in node.get_children %}-->
-<!--                {% if child.pk == div_selected %}-->
-<!--                    {{ child.title }}<br>-->
-<!--                {% else %}-->
-<!--                <a href="{{ child.get_absolute_url }}">{{ child.title }}</a><br>-->
-<!--                {% endif %}-->
-<!--            {% endfor %}-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      {% endif %}-->
-<!--    </div>-->
-<!--  </div>-->
-<!--{% endrecursetree %}-->
-
-{#<div class="menu" id="menuul" >#}
-{#{% for division,structure in divisions|tree_info %}#}
-{#    {% if structure.new_level %}<ul><li>{% else %}</li><li>{% endif %}#}
-{#        {{ division.title }}#}
-{#    {% for level in structure.closed_levels %}</li></ul>{% endfor %}#}
-{#{% endfor %}#}
-{#</div>#}
 <div class="menu" id="menuul" >
 
     <ul>
         {% recursetree divisions %}
             <li>
             {% if node.is_root_node == True %}
-                <span class="parent">   <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+                <span class="parent">  <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+           <hr class="dropdown-divider">
             {% else %}
                 <a href="{{ node.get_absolute_url }}">{{ node.title }}</a>
+            <hr class="dropdown-divider">
             {% endif %}
 
                 {% if not node.is_leaf_node %}
@@ -85,156 +28,61 @@
                 </span>
             {% endif %}
             </li>
+
         {% endrecursetree %}
     </ul>
 </div>
 
 <script>
-let menu = document.querySelector("#menuul");
-let u = window.location.href;
-let s = menu.querySelectorAll(" a ");
-let hide = menu.querySelectorAll(".children");
-let k = menu.querySelector("ul>li");
- let par = null;
-{#for (let h of hide){#}
-{#h.classList.remove("children");#}
-{#}#}
+let menu = document.querySelector("#menuul");   //Получаем меню по id
+let currentUrl = window.location.href;          //Получаем текущий url страницы
+let linksOfMenu = menu.querySelectorAll(" a "); //Получаем все ссылки в меню
 
+for (let link of linksOfMenu){ //Проходим по всем ссылкам меню
 
-
-//начало
-for (let m of s){
-
-    if (m.href == u){
-           {#let ng =  m.childNodes;#}
-           {#ng.classList.remove("children");#}
-           let a = m.parentNode.querySelector("a");
-           {#console.log(a);#}
-           {#a.removeAttribute("href"); //Удаление ссылки#}
-        let par = m.closest(".parent");//Получаем родителя по селектору
-
-        let tt = par.querySelectorAll("a");
-        for (let g of tt){
-
-               {#g.classList.remove("children");#}
-               {# let x = g.parentNode.querySelector("ul");#}
-               {# if (false == x.firstChild ){#}
-               {#     console.log("srabotalo");#}
-               {# }#}
-                    if (g.href == u){
-                       let fin = g.parentNode.querySelector("ul");
-                        fin.classList.remove("children");
-                        g.removeAttribute("href");
-
-                        break;
+    if (link.href == currentUrl){ //Выполняем условие если ссылка меню соответствует текущему url
+        let parNode = link.closest(".parent");   //Получаем родителя по селектору
+        let linksChildren = parNode.querySelectorAll("a");  //Получаем  ссылки родителя и дочерних элементов
+        for (let link of linksChildren){   //Проходим по ссылкам категории меню и его дочерним элементам
+            let elemUl = link.parentNode.querySelector("ul");   //Получаем категорию меню
+                    if (elemUl == null) { //Если категория меню последняя
+                        break;   //завершаем цикл
                     }
-                    else {
-                        let fin = g.parentNode.querySelector("ul");
-                        fin.classList.remove("children");
+                    else if (link.href == currentUrl){   //если урл текущего пункта меню равен текущему урл страницы
+                        elemUl.classList.remove("children"); //Удаляем скрываюший класс у элемента
+                        break; //завершаем цикл
+                    }
+                    else{
+                        elemUl.classList.remove("children"); //удаляем скрывающий класс у текущего элемента
                     }
 
         }
-
-
-
-
-
-
-
-
-        {#for (let f of par.querySelectorAll(".children")){#}
-        {#  let link = f.querySelector("a").href;#}
-        {##}
-        {#  f.classList.remove("children");#}
-        {#  if (link == u) {#}
-        {#      break;#}
-        {#  }#}
-        {#}#}
-
-
-           {#for (let c of ng) {#}
-                {#console.log(c.tagName);#}
-           {#    let l = c.querySelector("a");#}
-           {#    if (c.className == "children child"){#}
-           {#        c.classList.remove("child");#}
-           {##}
-           {#    }#}
-           {##}
-               {#c.style.display = "none";#}
-           {#    if (l.href == u){#}
-           {#        c.classList.remove("children");#}
-           {#        break;#}
-           {#    }#}
-           {##}
-           {##}
-           {##}
-           {#}#}
-
-
-
+        let deleteLink = link.parentNode.querySelector("a");//Получаем ссылку соответствующую урл текущей страницы
+        deleteLink.removeAttribute("href"); //Удаляем активность ссылки
 
     }
 
 }
+function setColor(e){
+    if(e.type==="mouseover") {
+        let b = e.target.parentNode;
+        console.log(b);
+        b.style.backgroundColor = "#212529";
+        {#e.target.style.backgroundColor = "#212529";#}
+    }
+    else if(e.type==="mouseout") {
+        let b = e.target.parentNode.querySelector("li");
+        b.style.backgroundColor = "";
+        {#e.target.style.backgroundColor = "";#}
+    }
+}
 
-{#menu.onclick = function (event) {#}
-    // let t = event.target.childNodes;
-    {#let t = event.target;#}
-    {#console.log("t" + t);#}
-    // if (t.tagName == 'LI') return;
-    // let c = t.document.querySelector("ul");
-    // t["ul.children"].toggle('children');
-    // let child = Array.from(t);
-    {#child[1].classList.toggle('children');#}
-    // let position = child.tagName.indexOf("ul.children");
-    // alert(t.tagName);
-{#}#}
+let m = document.querySelector("#menuul");
+let li = m.querySelectorAll("a");
+for (let t of li ){
 
+    t.addEventListener("mouseover", setColor);
+t.addEventListener("mouseout", setColor);
+}
 
-
-
-    // let link = menu.querySelectorAll("span");
-    // for (let l of link){
-    //     // console.log(l);
-    //     if(l.querySelector("a") == null){
-    //         // alert("123");
-    //         console.log(l.querySelector('first-of-type'));
-    //         l.querySelector('span:first-of-type').toggle('children');
-    //
-    //     }
-    //     // alert(l);
-    //
-    //     // if (l.querySelector('a:first-of-type').tagName == "a"){
-    //     //     alert('123');
-    //     // }
-    // }
-
-
-    // b = t.item(1);
-    {#t.classList.toggle('children');#}
-        // alert(t[3]);
-        // console.log(t.tagName);
-        // b.classList.toggle('children');
-
-
-
-
-//     for (let li of menu.querySelectorAll("li")){
-//         for (let b of li.querySelectorAll("a")){
-//         let span = document.createElement('span');
-//         {#span.classList.add('list');#}
-//         span.classList.add('show');
-//         li.prepend(span);
-//         span.append(span.nextSibling);
-//
-//     }
-// menu.onclick = function (event) {
-//      console.log(event.target.tagName);
-//      if (event.target.tagName != 'SPAN') return;
-//      let childcont = event.target.parentNode.querySelector("ul");
-//      // alert(childcont.length);
-//      if (!childcont) return;
-//      // childcont.hidden = !childcont.hidden;
-//      childcont.classList.toggle('children');
-// }
 </script>

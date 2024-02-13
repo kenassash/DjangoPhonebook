@@ -8,12 +8,22 @@ body{
 .children{
     display: none;
     /*скрытие элементов списка*/
+
 }
+
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
     list-style-type: none;
+
 }
+.menu a{
+   text-decoration: none;
+
+}
+/*.parent li :hover{*/
+/*    background-color: #E3E3E3;*/
+/*}*/
 
