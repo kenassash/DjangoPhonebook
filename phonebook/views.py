@@ -46,15 +46,26 @@ class PhoneDivision(ListView):
 
 
     def get_queryset(self):
+        if (self.request.GET):
+            query = self.request.GET.get('search_location')
+            print(self.request.GET)
+            print("srabotalo")
+            posts = PhoneNumber.objects.filter(surname=query)
+            return PhoneNumber.objects.filter(division__slug=self.kwargs['div_slug'], surname=query, is_published=True)
         return PhoneNumber.objects.filter(division__slug=self.kwargs['div_slug'], is_published=True)
-
     def get(self, request, *args, **kwargs):
+
         try:
             return super().get(request, *args, **kwargs)
         except Http404:
             return handler404(request, None, template_name='phonebook/index.html')
 
-
+    def post(self):
+        query = self.request.POST['search_location']
+        print(self.request.POST)
+        posts = PhoneNumber.objects.filter(surname=query)
+        print("srabotalo")
+        return posts
 # def show_division(requests, div_id):
 #     posts = PhoneNumber.objects.filter(division=div_id)
 #
