@@ -40,11 +40,11 @@ class PhoneDivision(SearchMixin, ListView):
         divisions = Division.objects.filter(slug=self.kwargs['div_slug'])
 
         # Комбинирование результатов в один список
-        queryset = list(phone_numbers) + list(divisions)
-        print(queryset)
-
-
+        queryset = {
+            'phone_numbers': list(phone_numbers)
+        }
         return queryset
+
 
     def get(self, request, *args, **kwargs):
         try:

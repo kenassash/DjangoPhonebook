@@ -16,9 +16,16 @@ class SearchMixin:
             Q(title__iregex=query)
         )
 
+        # queryset = list(phone_numbers) + list(divisions)
+        # print(queryset)
+        #
+        #
+        # return queryset
 
-
-        queryset = list(phone_numbers) + list(divisions)
-
-
+        # Возвращаем результаты телефонных номеров и категорий в виде словаря
+        queryset = {
+            'phone_numbers': list(phone_numbers),
+            'divisions': list(divisions)
+        }
+        print(queryset)
         return queryset

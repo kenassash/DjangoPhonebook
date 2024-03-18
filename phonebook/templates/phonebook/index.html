@@ -17,7 +17,6 @@
             <td colspan="8">Наименование: {{ division.title }}</td>
         </tr>
         <!-- информация о дочерних подразделениях -->
-        <!-- информация о дочерних подразделениях -->
         {% if children_divisions %}
         <tr>
             <td colspan="8">
@@ -32,6 +31,20 @@
             </td>
         </tr>
         {% endif %}
+
+            <!-- Отображение категорий -->
+        {% for division in posts.divisions %}
+            <tr>
+        <td colspan="8">
+        <strong>Отделы:</strong>
+        <ul class="expandable-list">
+        <li>
+            <a href="{{ division.get_absolute_url }}">{{ division.title }} </a>
+        </li>
+        </ul>
+        </td>
+        </tr>
+        {% endfor %}
 
 
     <!--шапка таблицы-->
@@ -56,7 +69,7 @@
     </tr>
 
         <!--задаем цикл перечисления записей листа объектов 'phonebooks'  в классе PhonesByDivision (views.py)-->
-{% for item in posts %}
+{% for item in posts.phone_numbers %}
     <!--открываем строку-->
     <tr>
         <!--в каждом столбце прописываем значения-->
@@ -77,10 +90,9 @@
         <!--в каждом столбце прописываем значения факс-->
         <td> {{item.division}}</td>
     </tr>
+
 {% endfor %}
     </table>
 </div>
-            {% for division in queryset %}
-                <li>{{ division.title }}</li>
-            {% endfor %}
+
 {% endblock %}
