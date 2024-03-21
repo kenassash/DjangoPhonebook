@@ -2,11 +2,10 @@ from django.db.models import Q
 
 from phonebook.models import *
 
+
 class SearchMixin:
 
-
     def perform_search(self, query):
-
         phone_numbers = PhoneNumber.objects.filter(
             Q(surname__iregex=query) | Q(name__iregex=query) | Q(second_name__iregex=query),
             is_published=True
@@ -16,16 +15,9 @@ class SearchMixin:
             Q(title__iregex=query)
         )
 
-        # queryset = list(phone_numbers) + list(divisions)
-        # print(queryset)
-        #
-        #
-        # return queryset
-
         # Возвращаем результаты телефонных номеров и категорий в виде словаря
         queryset = {
             'phone_numbers': list(phone_numbers),
             'divisions': list(divisions)
         }
-        print(queryset)
         return queryset

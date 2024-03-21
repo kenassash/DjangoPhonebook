@@ -15,6 +15,7 @@ class PhoneAdmin(admin.ModelAdmin):
         'cabinet',
         'is_published',
         'division',
+        'create_at',
 
     )
 
@@ -39,4 +40,3 @@ class DivisionAdmin(DjangoMpttAdmin):
 
 admin.site.register(PhoneNumber, PhoneAdmin)
 admin.site.register(Division, DivisionAdmin)
-

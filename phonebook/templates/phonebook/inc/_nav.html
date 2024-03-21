@@ -38,7 +38,7 @@
         <!-- Кнопка поиска -->
         <button class="btn btn-outline-success" type="submit"><small>Поиск</small></button>
         <!-- Кнопка сброса -->
-        <button class="btn btn-outline-success" type="reset"><small>Сброс</small></button>
+{#        <button class="btn btn-outline-success" type="reset"><small>Сброс</small></button>#}
     </form>
 </li>
 
@@ -49,21 +49,21 @@
                 </ul>
 
 
-                    <span class="navbar-text">
-                        <!--кнопка Отправить сообщение НЕ ОТОБРАЖАТЬ-->
-                        {% comment %}
-                        <!--кнопка Отправить сообщение-->
-                        <button class="btn btn-outline-success" src="{% url 'mail' %}" type="mail"><small>Отправить сообщение</small></button>
-                        {% endcomment %}
-                        <!--если пользователь авторизован-->
-
-                            {% if request.user.is_authenticated %}
-                            <small> Добро пожаловать, {{ user.username }}</small> | <a href="#"><small>Выход</small></a>
-                            {% else %}
-                            <!--если пользователь не авторизован-->
-                            <a href="#"><small>Регистрация</small></a> | <a href="#">Вход</a>
-                        {% endif %}
-                    </span>
+{#                    <span class="navbar-text">#}
+{#                        <!--кнопка Отправить сообщение НЕ ОТОБРАЖАТЬ-->#}
+{#                        {% comment %}#}
+{#                        <!--кнопка Отправить сообщение-->#}
+{#                        <button class="btn btn-outline-success" src="{% url 'mail' %}" type="mail"><small>Отправить сообщение</small></button>#}
+{#                        {% endcomment %}#}
+{#                        <!--если пользователь авторизован-->#}
+{##}
+{#                            {% if request.user.is_authenticated %}#}
+{#                            <small> Добро пожаловать, {{ user.username }}</small> | <a href="#"><small>Выход</small></a>#}
+{#                            {% else %}#}
+{#                            <!--если пользователь не авторизован-->#}
+{#                            <a href="#"><small>Регистрация</small></a> | <a href="#">Вход</a>#}
+{#                        {% endif %}#}
+{#                    </span>#}
                 </form>
             </div>
         </div>

@@ -18,6 +18,7 @@ class PhoneNumber(models.Model):
 
     division = TreeForeignKey('Division', on_delete=models.PROTECT, null=True, verbose_name='Наименование')
     slug = models.SlugField(max_length=150, blank=True, editable=False)
+
     def get_absolute_url(self):
         return reverse('user_data', kwargs={"post_id": self.pk})
 
@@ -25,9 +26,9 @@ class PhoneNumber(models.Model):
         return self.surname
 
     class Meta:
-        verbose_name = 'Телефонны'
-        verbose_name_plural = 'Телефонны'
-        ordering = ['-create_at']
+        verbose_name = 'Телефоны'
+        verbose_name_plural = 'Телефоны'
+        ordering = ['create_at']
 
 
 class Division(MPTTModel):
@@ -35,6 +36,7 @@ class Division(MPTTModel):
     parent = TreeForeignKey('self', on_delete=models.PROTECT, null=True, blank=True, related_name='children',
                             db_index=True, verbose_name='Родительская категория')
     slug = models.SlugField()
+
     class MPTTMeta:
         order_insertion_by = ['title']
 
