@@ -1,8 +1,8 @@
 from django.conf.urls import handler404
-from django.http import HttpResponse, Http404
+from django.http import Http404
 from django.views.generic import ListView
-from .models import *
-from .utils import *
+from .models import PhoneNumber, Division
+from .utils import SearchMixin
 
 
 class PhoneHome(SearchMixin, ListView):

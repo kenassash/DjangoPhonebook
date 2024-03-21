@@ -1,6 +1,5 @@
 from django.db.models import Q
-
-from phonebook.models import *
+from phonebook.models import PhoneNumber, Division
 
 
 class SearchMixin:
