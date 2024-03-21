@@ -1,0 +1,2325 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-01-29T12:43:19.460Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Администрация",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-01-29T12:43:40.201Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Управление ЕМИС",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-01-29T12:43:53.793Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Отдел ТЗИ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-01-29T12:44:08.542Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Финансовое управление",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-01-29T12:44:19.139Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Внешние",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-01-29T12:44:24.068Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Эхс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-01-29T12:44:34.941Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-01-29T12:44:42.700Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-01-29T12:44:53.541Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-01-29T12:47:53.913Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-01-29T12:48:33.238Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Фин1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-01-29T12:48:39.314Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Фин2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-01-29T12:49:09.612Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-01-30T01:31:32.224Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Руководители",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-01-30T01:32:46.967Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Имамеев",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-01-30T01:33:00.738Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Имамеев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-01-30T01:33:07.117Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Имамеев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-01-30T01:36:27.160Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Мозолева",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-01-30T01:37:37.400Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Белоненко",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-01-30T04:54:01.884Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Пугкарёв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-01-30T04:54:41.035Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Пугкарёв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-01-30T04:55:08.963Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Пугкарёв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-01-30T05:03:48.231Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Пугкарёв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-01-30T05:04:55.724Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Тришина",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-01-30T05:05:29.512Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Тришина",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-01-30T05:06:20.074Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Музыченко",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-01-30T05:07:00.395Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "11",
+    "object_repr": "Валентина",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-01-30T05:08:09.136Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Троян",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-01-30T05:11:55.160Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Отдел информационного обеспечения (ул. Ленина 108/2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-01-30T05:12:01.372Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Пушкарёв",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0414\\u043e\\u043b\\u0436\\u043d\\u043e\\u0441\\u0442\\u044c\", \"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u2116\", \"\\u041a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442\", \"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-01-30T05:12:43.105Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Александр",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0414\\u043e\\u043b\\u0436\\u043d\\u043e\\u0441\\u0442\\u044c\", \"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u2116\", \"\\u041a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442\", \"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-01-30T05:13:18.169Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Коростелева",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0414\\u043e\\u043b\\u0436\\u043d\\u043e\\u0441\\u0442\\u044c\", \"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u2116\", \"\\u041a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442\", \"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-01-30T05:13:27.201Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Мавлеткулов",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-01-30T05:14:08.386Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Пелевин",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\", \"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\", \"\\u041e\\u0442\\u0447\\u0435\\u0441\\u0442\\u0432\\u043e\", \"\\u0414\\u043e\\u043b\\u0436\\u043d\\u043e\\u0441\\u0442\\u044c\", \"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u2116\", \"\\u041a\\u0430\\u0431\\u0438\\u043d\\u0435\\u0442\", \"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-01-30T05:23:01.017Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Отдел правовой работы и кадровой политики",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-01-30T05:23:50.347Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "Рожкова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-01-30T05:24:26.690Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "13",
+    "object_repr": "Кантимирова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-01-30T05:25:09.995Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "Штегман",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-01-30T05:25:44.379Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "15",
+    "object_repr": "Музыченко",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-01-30T05:31:46.213Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Бюджетный отдел",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435 \\u043e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438\", \"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-01-30T05:32:16.313Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "Геращенко",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-01-30T05:37:14.413Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "17",
+    "object_repr": "Хода",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-01-30T05:37:39.819Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "Захаревич",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-01-30T05:38:04.049Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "19",
+    "object_repr": "Ярина",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-01-30T08:01:14.313Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Тришина",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-01-30T08:02:55.782Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Тришина",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-01-31T04:25:16.668Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "20",
+    "object_repr": "Троян",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-03-20T06:16:45.294Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Пакулов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-03-20T06:17:20.974Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Отдел цифровизации",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-03-20T06:17:45.706Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "22",
+    "object_repr": "Ступников",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-03-20T06:18:13.608Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "23",
+    "object_repr": "Лагода",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-03-20T06:20:19.198Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Отдел правовой работы и кадровой политики",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-03-20T06:20:34.500Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Отдел правовой работы и кадровой политики",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-03-20T06:20:56.501Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Отдел доходов, отраслей экономики и сферы услуг",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-03-20T06:21:49.772Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "24",
+    "object_repr": "Кацель",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-03-20T07:00:22.967Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "25",
+    "object_repr": "Гумиров",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-03-20T07:00:48.535Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "26",
+    "object_repr": "Гончарова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-03-20T07:01:10.093Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "27",
+    "object_repr": "Амбросова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-03-20T07:01:37.671Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "Калашников Александр Сергеевич",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-03-20T07:01:47.898Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "28",
+    "object_repr": "Калашников",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u0430\\u043c\\u0438\\u043b\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-03-20T07:02:12.604Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "29",
+    "object_repr": "Паваляева",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-03-20T07:02:36.463Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "30",
+    "object_repr": "Воронов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-03-20T07:02:59.936Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "31",
+    "object_repr": "Липинская",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2024-03-20T07:03:26.792Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "32",
+    "object_repr": "Лончакова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2024-03-20T07:04:01.704Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "33",
+    "object_repr": "Рудненок",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2024-03-20T07:04:20.833Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "34",
+    "object_repr": "Безрукова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2024-03-20T07:04:45.334Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "35",
+    "object_repr": "Хопатько",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2024-03-20T07:05:06.521Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "36",
+    "object_repr": "Степаненко",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2024-03-20T07:05:27.370Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "37",
+    "object_repr": "Соловьева",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2024-03-20T07:05:46.801Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "38",
+    "object_repr": "Перов",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2024-03-20T07:06:11.294Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "39",
+    "object_repr": "Макарова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2024-03-20T07:06:54.137Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "40",
+    "object_repr": "Альбеева",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2024-03-20T07:07:16.359Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "41",
+    "object_repr": "Слепцова",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2024-03-20T07:08:26.327Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Имамеев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2024-03-20T07:09:38.628Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Имамеев",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u043c\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2024-03-20T07:15:15.680Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Пакулов",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2024-03-20T07:15:25.003Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "21",
+    "object_repr": "Пакулов",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2024-03-20T07:22:41.745Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "39",
+    "object_repr": "Макарова",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2024-03-20T07:22:56.830Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "39",
+    "object_repr": "Макарова",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2024-03-20T07:23:27.034Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "39",
+    "object_repr": "Макарова",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2024-03-20T07:25:24.204Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Тришина",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Категория",
+    "content_type": 7,
+    "codename": "add_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Категория",
+    "content_type": 7,
+    "codename": "change_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Категория",
+    "content_type": 7,
+    "codename": "delete_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Категория",
+    "content_type": 7,
+    "codename": "view_division"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Телефонны",
+    "content_type": 8,
+    "codename": "add_phonenumber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Телефонны",
+    "content_type": 8,
+    "codename": "change_phonenumber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Телефонны",
+    "content_type": 8,
+    "codename": "delete_phonenumber"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Телефонны",
+    "content_type": 8,
+    "codename": "view_phonenumber"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$GGxp59rxWN5MvmcEGWVz4V$anx89rQA4Ej5nMZ48znYiPw1pS9lE5/tbzELCEMQlrc=",
+    "last_login": "2024-03-20T07:13:48.822Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-01-29T12:42:41.002Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "phonebook",
+    "model": "division"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "phonebook",
+    "model": "phonenumber"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4aac2b4lehb4pi097km4gs2t9gzjft9c",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-xSaU9JzB2vVucADZUpxUiLvjSCmgGmnem3mLCNua49Z4iTOJi9Di9NshpCeXHdADyr3KVMu6zCh3RR60yVslfl0P9-8gQ8t9bWDy4cyDQ4QwOkpm9IGM4qCGwNjTabIWNamuJe-CwikpJOuQgEl8vujAOIg:1rUQya:2taOyRDA35pzQtcx0ituxXR2dE_MiAuGsEzoDzesTnw",
+    "expire_date": "2024-02-12T12:43:00.032Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "o0c9f466eppl6zp72vea2y2fd7naw4yt",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-xSaU9JzB2vVucADZUpxUiLvjSCmgGmnem3mLCNua49Z4iTOJi9Di9NshpCeXHdADyr3KVMu6zCh3RR60yVslfl0P9-8gQ8t9bWDy4cyDQ4QwOkpm9IGM4qCGwNjTabIWNamuJe-CwikpJOuQgEl8vujAOIg:1rUgZL:Cjrnxvc8NGjZD521xaTuOa6eNtniuAuP8R7Tfxvcoqs",
+    "expire_date": "2024-02-13T05:21:59.701Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "twvvde47l4cyjb99ebxhvi2oph5a5y7d",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln-xSaU9JzB2vVucADZUpxUiLvjSCmgGmnem3mLCNua49Z4iTOJi9Di9NshpCeXHdADyr3KVMu6zCh3RR60yVslfl0P9-8gQ8t9bWDy4cyDQ4QwOkpm9IGM4qCGwNjTabIWNamuJe-CwikpJOuQgEl8vujAOIg:1rmq8y:FjVbyJ4kRKevdBCW-4cPhwxs3WgVnb3f-_V3hXTwG3c",
+    "expire_date": "2024-04-03T07:13:48.960Z"
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 1,
+  "fields": {
+    "surname": "Пушкарёв",
+    "name": "Роман",
+    "second_name": "Игоревич",
+    "position": "Консультант",
+    "phone": "233-772",
+    "short_phone": "772",
+    "cabinet": "Ленина 108/2 (каб. № 208)",
+    "create_at": "2024-01-29T12:44:34.940Z",
+    "update_at": "2024-01-30T05:12:01.371Z",
+    "is_published": true,
+    "division": 10,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 3,
+  "fields": {
+    "surname": "Мавлеткулов",
+    "name": "Александр",
+    "second_name": "Вячеславович",
+    "position": "Главный специалист",
+    "phone": "233-775",
+    "short_phone": "775",
+    "cabinet": "208",
+    "create_at": "2024-01-29T12:44:53.540Z",
+    "update_at": "2024-01-30T05:13:27.200Z",
+    "is_published": true,
+    "division": 10,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 4,
+  "fields": {
+    "surname": "Коростелева",
+    "name": "Юлия",
+    "second_name": "Евгеньевна",
+    "position": "Консультант",
+    "phone": "233-773",
+    "short_phone": "773",
+    "cabinet": "773",
+    "create_at": "2024-01-29T12:47:53.893Z",
+    "update_at": "2024-01-30T05:13:18.168Z",
+    "is_published": true,
+    "division": 10,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 5,
+  "fields": {
+    "surname": "Пелевин",
+    "name": "Денис",
+    "second_name": "Юсупович",
+    "position": "Начальник отдела",
+    "phone": "233-774",
+    "short_phone": "774",
+    "cabinet": "208",
+    "create_at": "2024-01-29T12:49:09.603Z",
+    "update_at": "2024-01-30T05:14:08.385Z",
+    "is_published": true,
+    "division": 10,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 6,
+  "fields": {
+    "surname": "Имамеев",
+    "name": "Олег",
+    "second_name": "Гатауллович",
+    "position": "Мэр города Благовещенска",
+    "phone": "233-707",
+    "short_phone": "707",
+    "cabinet": "312",
+    "create_at": "2024-01-30T01:32:46.966Z",
+    "update_at": "2024-03-20T07:09:38.625Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 7,
+  "fields": {
+    "surname": "Мозолева",
+    "name": "Наталья",
+    "second_name": "Владимировна",
+    "position": "Помощник мэра города Благовещенска",
+    "phone": "233-708",
+    "short_phone": "708",
+    "cabinet": "312",
+    "create_at": "2024-01-30T01:36:27.159Z",
+    "update_at": "2024-01-30T01:36:27.159Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 8,
+  "fields": {
+    "surname": "Белоненко",
+    "name": "Екатерина",
+    "second_name": "Романовна",
+    "position": "Секретарь приемной мэра",
+    "phone": "233-707",
+    "short_phone": "707",
+    "cabinet": "312",
+    "create_at": "2024-01-30T01:37:37.398Z",
+    "update_at": "2024-01-30T01:37:37.398Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 9,
+  "fields": {
+    "surname": "Тришина",
+    "name": "Наталья",
+    "second_name": "Эдуардовна",
+    "position": "Начальник управления",
+    "phone": "237-000, <br> 237-225",
+    "short_phone": "102",
+    "cabinet": "310",
+    "create_at": "2024-01-30T05:04:55.722Z",
+    "update_at": "2024-03-20T07:25:24.203Z",
+    "is_published": true,
+    "division": 4,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 10,
+  "fields": {
+    "surname": "Музыченко",
+    "name": "Ирина",
+    "second_name": "Викторовна",
+    "position": "Заместитель начальника управления",
+    "phone": "237-201",
+    "short_phone": "104",
+    "cabinet": "312",
+    "create_at": "2024-01-30T05:06:20.072Z",
+    "update_at": "2024-01-30T05:06:20.072Z",
+    "is_published": true,
+    "division": 4,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 11,
+  "fields": {
+    "surname": "Валентина",
+    "name": "Калинина",
+    "second_name": "Борисовна",
+    "position": "Главный специалист",
+    "phone": "237-211",
+    "short_phone": "",
+    "cabinet": "311",
+    "create_at": "2024-01-30T05:07:00.393Z",
+    "update_at": "2024-01-30T05:07:00.393Z",
+    "is_published": true,
+    "division": 4,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 12,
+  "fields": {
+    "surname": "Рожкова",
+    "name": "Надежда",
+    "second_name": "Александровна",
+    "position": "Начальник отдела",
+    "phone": "237-215",
+    "short_phone": "",
+    "cabinet": "317",
+    "create_at": "2024-01-30T05:23:50.346Z",
+    "update_at": "2024-01-30T05:23:50.346Z",
+    "is_published": true,
+    "division": 7,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 13,
+  "fields": {
+    "surname": "Кантимирова",
+    "name": "Софья",
+    "second_name": "Валерьевна",
+    "position": "Консультант",
+    "phone": "237-204",
+    "short_phone": "",
+    "cabinet": "316",
+    "create_at": "2024-01-30T05:24:26.689Z",
+    "update_at": "2024-01-30T05:24:26.689Z",
+    "is_published": true,
+    "division": 7,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 14,
+  "fields": {
+    "surname": "Штегман",
+    "name": "Наталья",
+    "second_name": "Леонидовна",
+    "position": "Консультант",
+    "phone": "237-215",
+    "short_phone": "107",
+    "cabinet": "117",
+    "create_at": "2024-01-30T05:25:09.993Z",
+    "update_at": "2024-01-30T05:25:09.993Z",
+    "is_published": true,
+    "division": 7,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 15,
+  "fields": {
+    "surname": "Музыченко",
+    "name": "Валерия",
+    "second_name": "Сергеевна",
+    "position": "Консультант",
+    "phone": "237-216",
+    "short_phone": "",
+    "cabinet": "117",
+    "create_at": "2024-01-30T05:25:44.378Z",
+    "update_at": "2024-01-30T05:25:44.378Z",
+    "is_published": true,
+    "division": 7,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 16,
+  "fields": {
+    "surname": "Геращенко",
+    "name": "Наталья",
+    "second_name": "Александровна",
+    "position": "Заместитель начальника отдела",
+    "phone": "237-210",
+    "short_phone": "",
+    "cabinet": "313",
+    "create_at": "2024-01-30T05:32:16.312Z",
+    "update_at": "2024-01-30T05:32:16.312Z",
+    "is_published": true,
+    "division": 8,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 17,
+  "fields": {
+    "surname": "Хода",
+    "name": "Светлана",
+    "second_name": "Ивановна",
+    "position": "Начальник отдела",
+    "phone": "237-210",
+    "short_phone": "",
+    "cabinet": "313",
+    "create_at": "2024-01-30T05:37:14.412Z",
+    "update_at": "2024-01-30T05:37:14.412Z",
+    "is_published": true,
+    "division": 8,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 18,
+  "fields": {
+    "surname": "Захаревич",
+    "name": "Елена",
+    "second_name": "Афанасьевна",
+    "position": "Консультант",
+    "phone": "237-208",
+    "short_phone": "",
+    "cabinet": "",
+    "create_at": "2024-01-30T05:37:39.817Z",
+    "update_at": "2024-01-30T05:37:39.818Z",
+    "is_published": true,
+    "division": 8,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 19,
+  "fields": {
+    "surname": "Ярина",
+    "name": "Анна",
+    "second_name": "Сергеевна",
+    "position": "Консультант",
+    "phone": "237-222",
+    "short_phone": "",
+    "cabinet": "",
+    "create_at": "2024-01-30T05:38:04.049Z",
+    "update_at": "2024-01-30T05:38:04.049Z",
+    "is_published": true,
+    "division": 8,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 20,
+  "fields": {
+    "surname": "Троян",
+    "name": "Дмитрий",
+    "second_name": "Геннадьевич",
+    "position": "Консультант",
+    "phone": "233-776",
+    "short_phone": "776",
+    "cabinet": "211",
+    "create_at": "2024-01-31T04:25:16.665Z",
+    "update_at": "2024-01-31T04:25:16.665Z",
+    "is_published": true,
+    "division": 3,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 21,
+  "fields": {
+    "surname": "Пакулов",
+    "name": "Александр",
+    "second_name": "Викторович",
+    "position": "Начальник управления ЕМИС",
+    "phone": "233-770",
+    "short_phone": "770",
+    "cabinet": "210",
+    "create_at": "2024-03-20T06:16:45.293Z",
+    "update_at": "2024-03-20T07:15:25.002Z",
+    "is_published": true,
+    "division": 2,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 22,
+  "fields": {
+    "surname": "Ступников",
+    "name": "Василий",
+    "second_name": "Михайлович",
+    "position": "Заместитель начальника управления - начальник отдела",
+    "phone": "233-771",
+    "short_phone": "210",
+    "cabinet": "771",
+    "create_at": "2024-03-20T06:17:45.705Z",
+    "update_at": "2024-03-20T06:17:45.705Z",
+    "is_published": true,
+    "division": 11,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 23,
+  "fields": {
+    "surname": "Лагода",
+    "name": "Юлия",
+    "second_name": "Алексеевна",
+    "position": "Консультант",
+    "phone": "233-779",
+    "short_phone": "779",
+    "cabinet": "208",
+    "create_at": "2024-03-20T06:18:13.607Z",
+    "update_at": "2024-03-20T06:18:13.607Z",
+    "is_published": true,
+    "division": 11,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 24,
+  "fields": {
+    "surname": "Кацель",
+    "name": "Елена",
+    "second_name": "Александровна",
+    "position": "Заместитель начальника управления - Начальник отдела",
+    "phone": "237-213",
+    "short_phone": "",
+    "cabinet": "",
+    "create_at": "2024-03-20T06:21:49.770Z",
+    "update_at": "2024-03-20T06:21:49.770Z",
+    "is_published": true,
+    "division": 13,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 25,
+  "fields": {
+    "surname": "Гумиров",
+    "name": "Дмитрий",
+    "second_name": "Александрович",
+    "position": "Первый заместитель мэра города Благовещенска",
+    "phone": "233-709",
+    "short_phone": "709",
+    "cabinet": "308",
+    "create_at": "2024-03-20T07:00:22.965Z",
+    "update_at": "2024-03-20T07:00:22.965Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 26,
+  "fields": {
+    "surname": "Гончарова",
+    "name": "Алина",
+    "second_name": "Ивановна",
+    "position": "Секретарь приемной первого заместителя мэра",
+    "phone": "233-709",
+    "short_phone": "709",
+    "cabinet": "308",
+    "create_at": "2024-03-20T07:00:48.533Z",
+    "update_at": "2024-03-20T07:00:48.533Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 27,
+  "fields": {
+    "surname": "Амбросова",
+    "name": "Оксана",
+    "second_name": "Владимировна",
+    "position": "Помощник заместителя мэра",
+    "phone": "233-711",
+    "short_phone": "711",
+    "cabinet": "420",
+    "create_at": "2024-03-20T07:01:10.092Z",
+    "update_at": "2024-03-20T07:01:10.092Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 28,
+  "fields": {
+    "surname": "Калашников",
+    "name": "Александр",
+    "second_name": "Сергеевич",
+    "position": "Заместитель мэра города Благовещенска",
+    "phone": "233",
+    "short_phone": "",
+    "cabinet": "422",
+    "create_at": "2024-03-20T07:01:37.669Z",
+    "update_at": "2024-03-20T07:01:47.897Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 29,
+  "fields": {
+    "surname": "Паваляева",
+    "name": "Нина",
+    "second_name": "Николаевна",
+    "position": "Помощник заместителя мэра",
+    "phone": "233-712",
+    "short_phone": "712",
+    "cabinet": "420",
+    "create_at": "2024-03-20T07:02:12.603Z",
+    "update_at": "2024-03-20T07:02:12.603Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 30,
+  "fields": {
+    "surname": "Воронов",
+    "name": "Александр",
+    "second_name": "Евгеньевич",
+    "position": "Заместитель мэра города Благовещенска",
+    "phone": "233-714",
+    "short_phone": "714",
+    "cabinet": "422",
+    "create_at": "2024-03-20T07:02:36.462Z",
+    "update_at": "2024-03-20T07:02:36.462Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 31,
+  "fields": {
+    "surname": "Липинская",
+    "name": "Ирина",
+    "second_name": "Олеговна",
+    "position": "Помощник заместителя мэра",
+    "phone": "233-713",
+    "short_phone": "713",
+    "cabinet": "",
+    "create_at": "2024-03-20T07:02:59.935Z",
+    "update_at": "2024-03-20T07:02:59.935Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 32,
+  "fields": {
+    "surname": "Лончакова",
+    "name": "Ольга",
+    "second_name": "Викторовна",
+    "position": "Секретарь приемной заместителя мэра",
+    "phone": "233-714",
+    "short_phone": "714",
+    "cabinet": "422",
+    "create_at": "2024-03-20T07:03:26.791Z",
+    "update_at": "2024-03-20T07:03:26.791Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 33,
+  "fields": {
+    "surname": "Рудненок",
+    "name": "Виталий",
+    "second_name": "Александрович",
+    "position": "Заместитель мэра города Благовещенска",
+    "phone": "233-715",
+    "short_phone": "715",
+    "cabinet": "301",
+    "create_at": "2024-03-20T07:04:01.703Z",
+    "update_at": "2024-03-20T07:04:01.703Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 34,
+  "fields": {
+    "surname": "Безрукова",
+    "name": "Снежана",
+    "second_name": "Александровна",
+    "position": "Помощник заместителя мэра",
+    "phone": "233-717",
+    "short_phone": "717",
+    "cabinet": "420",
+    "create_at": "2024-03-20T07:04:20.832Z",
+    "update_at": "2024-03-20T07:04:20.832Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 35,
+  "fields": {
+    "surname": "Хопатько",
+    "name": "Виктория",
+    "second_name": "Андреевна",
+    "position": "Заместитель мэра города Благовещенска",
+    "phone": "233-715",
+    "short_phone": "715",
+    "cabinet": "301",
+    "create_at": "2024-03-20T07:04:45.332Z",
+    "update_at": "2024-03-20T07:04:45.332Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 36,
+  "fields": {
+    "surname": "Степаненко",
+    "name": "Анна",
+    "second_name": "Олеговна",
+    "position": "Помощник заместителя мэра",
+    "phone": "233-718",
+    "short_phone": "718",
+    "cabinet": "420",
+    "create_at": "2024-03-20T07:05:06.520Z",
+    "update_at": "2024-03-20T07:05:06.520Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 37,
+  "fields": {
+    "surname": "Соловьева",
+    "name": "Александра",
+    "second_name": "Игоревна",
+    "position": "Секретарь приемной заместителя мэра",
+    "phone": "233-715",
+    "short_phone": "715",
+    "cabinet": "301",
+    "create_at": "2024-03-20T07:05:27.368Z",
+    "update_at": "2024-03-20T07:05:27.368Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 38,
+  "fields": {
+    "surname": "Перов",
+    "name": "Дмитрий",
+    "second_name": "Александрович",
+    "position": "Заместитель мэра города Благовещенска",
+    "phone": "-",
+    "short_phone": "",
+    "cabinet": "",
+    "create_at": "2024-03-20T07:05:46.800Z",
+    "update_at": "2024-03-20T07:05:46.800Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 39,
+  "fields": {
+    "surname": "Макарова",
+    "name": "Юлия",
+    "second_name": "Александровна",
+    "position": "Помощник заместителя мэра города Благовещенска",
+    "phone": "233-726; <br> 89656705509",
+    "short_phone": "726",
+    "cabinet": "216",
+    "create_at": "2024-03-20T07:06:11.293Z",
+    "update_at": "2024-03-20T07:23:27.033Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 40,
+  "fields": {
+    "surname": "Альбеева",
+    "name": "Лариса",
+    "second_name": "Валерьевна",
+    "position": "Руководитель аппарата мэра города Благовещенска",
+    "phone": "233-780",
+    "short_phone": "780",
+    "cabinet": "426",
+    "create_at": "2024-03-20T07:06:54.135Z",
+    "update_at": "2024-03-20T07:06:54.135Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.phonenumber",
+  "pk": 41,
+  "fields": {
+    "surname": "Слепцова",
+    "name": "Кристина",
+    "second_name": "Сергеевна",
+    "position": "Пресс-секретарь",
+    "phone": "233-723",
+    "short_phone": "723",
+    "cabinet": "309",
+    "create_at": "2024-03-20T07:07:16.358Z",
+    "update_at": "2024-03-20T07:07:16.358Z",
+    "is_published": true,
+    "division": 9,
+    "slug": ""
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 1,
+  "fields": {
+    "title": "Администрация",
+    "parent": null,
+    "slug": "administraciya",
+    "lft": 1,
+    "rght": 20,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 2,
+  "fields": {
+    "title": "Управление ЕМИС",
+    "parent": 1,
+    "slug": "upravlenie-emis",
+    "lft": 4,
+    "rght": 11,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 3,
+  "fields": {
+    "title": "Отдел ТЗИ",
+    "parent": 2,
+    "slug": "otdel-tzi",
+    "lft": 5,
+    "rght": 6,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 4,
+  "fields": {
+    "title": "Финансовое управление",
+    "parent": 1,
+    "slug": "finansovoe-upravlenie",
+    "lft": 12,
+    "rght": 19,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 5,
+  "fields": {
+    "title": "Внешние",
+    "parent": null,
+    "slug": "vneshnie",
+    "lft": 1,
+    "rght": 4,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 6,
+  "fields": {
+    "title": "Эхс",
+    "parent": 5,
+    "slug": "ehs",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 2,
+    "level": 1
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 7,
+  "fields": {
+    "title": "Отдел правовой работы и кадровой политики",
+    "parent": 4,
+    "slug": "otdel-pravovoj-raboty-i-kadrovoj-politiki",
+    "lft": 17,
+    "rght": 18,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 8,
+  "fields": {
+    "title": "Бюджетный отдел",
+    "parent": 4,
+    "slug": "byudzhetnyj-otdel",
+    "lft": 13,
+    "rght": 14,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 9,
+  "fields": {
+    "title": "Руководители",
+    "parent": 1,
+    "slug": "rukovoditeli",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 1,
+    "level": 1
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 10,
+  "fields": {
+    "title": "Отдел информационного обеспечения (ул. Ленина 108/2)",
+    "parent": 2,
+    "slug": "otdel-informacionnogo-obespecheniya-ul-lenina-1082",
+    "lft": 7,
+    "rght": 8,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 11,
+  "fields": {
+    "title": "Отдел цифровизации",
+    "parent": 2,
+    "slug": "otdel-cifrovizacii",
+    "lft": 9,
+    "rght": 10,
+    "tree_id": 1,
+    "level": 2
+  }
+},
+{
+  "model": "phonebook.division",
+  "pk": 13,
+  "fields": {
+    "title": "Отдел доходов, отраслей экономики и сферы услуг",
+    "parent": 4,
+    "slug": "otdel-dohodov-otraslej-ekonomiki-i-sfery-uslug",
+    "lft": 15,
+    "rght": 16,
+    "tree_id": 1,
+    "level": 2
+  }
+}
+]
